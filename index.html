@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="km" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekkzy Key Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardBg: '#111827',
+                        cardBorder: '#1f293d',
+                        accentBlue: '#00d2ff',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FONT KHMER -->
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kantumruy Pro', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-200 font-sans antialiased min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-800 bg-[#0d1322]">
+        <div class="flex items-center space-x-4">
+            <button class="text-gray-400 hover:text-white"><i class="fa-solid fa-bars text-lg"></i></button>
+            <div class="flex items-center space-x-2">
+                <span class="text-yellow-400"><i class="fa-solid fa-bolt"></i></span>
+                <span class="font-bold tracking-wide text-white">Lekkzy Key Store</span>
+            </div>
+        </div>
+        <div class="flex items-center space-x-3">
+            <button class="text-yellow-400 text-sm"><i class="fa-solid fa-sun"></i></button>
+            <button class="bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-semibold px-4 py-1.5 rounded-lg text-sm transition">ចូលគណនី</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-6">
+        
+        <!-- Breadcrumb -->
+        <div class="text-xs text-gray-400 mb-6 flex items-center space-x-2">
+            <span>ទំព័រដើមហាង</span>
+            <span>/</span>
+            <span>Free Fire</span>
+            <span>/</span>
+            <span class="text-gray-200">PHANTOM MODZ FF IOS/ADR</span>
+        </div>
+
+        <!-- Product Card Section -->
+        <div class="bg-cardBg border border-cardBorder rounded-2xl p-6 md:p-8 shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                
+                <!-- Product Image/Thumbnail -->
+                <div class="md:col-span-5 flex justify-center items-center">
+                    <div class="w-full h-64 md:h-72 bg-black rounded-xl border border-gray-800 flex items-center justify-center shadow-inner overflow-hidden">
+                        <!-- ជំនួស link_រូបភាព_ផលិតផល.png ជាមួយរូបភាពផលិតផលរបស់អ្នក -->
+                     <img src="photo_2026-10-21_03-40-31.jpg" alt="PHANTOM MODZ FF ALL" class="w-full h-full object-cover">
+                    </div>​
+                </div>
+
+                <!-- Product Details -->
+                <div class="md:col-span-7 flex flex-col justify-between">
+                    <div>
+                        <!-- Tags -->
+                        <div class="flex items-center space-x-3 mb-3 text-xs">
+                            <span class="bg-cyan-950 text-cyan-400 px-2.5 py-1 rounded-md font-medium border border-cyan-800/50"># FREE FIRE</span>
+                            <span class="text-emerald-400 flex items-center space-x-1">
+                                <i class="fa-solid fa-circle text-[8px]"></i>
+                                <span>ផ្ដល់ជូនគ្រាប់កូនសោរស្វ័យប្រវត្តភ្លាមៗ</span>
+                            </span>
+                        </div>
+
+                        <!-- Title -->
+                        <h1 class="text-2xl md:text-3xl font-extrabold text-white tracking-wide mb-2">PHANTOM MODZ FF IOS/ADR</h1>
+
+                        <!-- Price -->
+                        <div class="flex items-baseline space-x-2 mb-6">
+                            <span id="product-price" class="text-3xl font-bold text-cyan-400"></span>
+                            <span class="text-xs text-gray-400">ក្នុងមួយអាជ្ញាប័ណ្ណ / Key</span>
+                        </div>
+
+                        <!-- Duration Selector -->
+                        <div class="mb-6">
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">ជ្រើសរើសរយៈពេល / កញ្ចប់៖</label>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div onclick="selectPackage(this, '២៥០០៛')" class="package-card border-2 border-cyan-400 bg-[#152238] rounded-xl p-3 cursor-pointer relative">
+                                    <div class="text-sm font-bold text-white">១ ម៉ោង</div>
+                                    <div class="text-xs text-cyan-400 font-semibold mt-1">២៥០០៛ <span class="text-[10px] text-emerald-400 font-normal">មានក្នុងស្តុក</span></div>
+                                </div>
+                                <div onclick="selectPackage(this, '៣៥០០៛')" class="package-card border border-gray-800 bg-[#0e1626] hover:border-gray-600 rounded-xl p-3 cursor-pointer">
+                                    <div class="text-sm font-medium text-gray-300">៣ ម៉ោង</div>
+                                    <div class="text-xs text-gray-400 mt-1">៣៥០០៛ <span class="text-[10px] text-emerald-400">មានក្នុងស្តុក</span></div>
+                                </div>
+                                <div onclick="selectPackage(this, '៨៥០០៛')" class="package-card border border-gray-800 bg-[#0e1626] hover:border-gray-600 rounded-xl p-3 cursor-pointer">
+                                    <div class="text-sm font-medium text-gray-300">១ ថ្ងៃ</div>
+                                    <div class="text-xs text-gray-400 mt-1">៨៥០០៛ <span class="text-[10px] text-emerald-400">មានក្នុងស្តុក</span></div>
+                                </div>
+                                <div onclick="selectPackage(this, '១៥០០០៛')" class="package-card border border-gray-800 bg-[#0e1626] hover:border-gray-600 rounded-xl p-3 cursor-pointer">
+                                    <div class="text-sm font-medium text-gray-300">៣ ថ្ងៃ</div>
+                                    <div class="text-xs text-gray-400 mt-1">១៥០០០៛ <span class="text-[10px] text-emerald-400">មានក្នុងស្តុក</span></div>
+                                </div>
+                                <div onclick="selectPackage(this, '២១០០០៛')" class="package-card border border-gray-800 bg-[#0e1626] hover:border-gray-600 rounded-xl p-3 cursor-pointer">
+                                    <div class="text-sm font-medium text-gray-300">៧ ថ្ងៃ</div>
+                                    <div class="text-xs text-gray-400 mt-1">២១០០០៛ <span class="text-[10px] text-emerald-400">មានក្នុងស្តុក</span></div>
+                                </div>
+                                <div onclick="selectPackage(this, '៣៤០០០៛')" class="package-card border border-gray-800 bg-[#0e1626] hover:border-gray-600 rounded-xl p-3 cursor-pointer">
+                                    <div class="text-sm font-medium text-gray-300">៣០ ថ្ងៃ</div>
+                                    <div class="text-xs text-gray-400 mt-1">៣៤០០០៛ <span class="text-[10px] text-emerald-400">មានក្នុងស្តុក</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Features Box -->
+                        <div class="bg-[#0b101d] border border-gray-800/80 rounded-xl p-4 space-y-2.5 mb-6 text-xs text-gray-300">
+                            <div class="flex items-start space-x-2">
+                                <i class="fa-solid fa-check text-cyan-400 mt-0.5"></i>
+                                <div><strong class="text-white">ទទួលបាន Key ភ្លាមៗ៖</strong> បង្ហាញកូដអាជ្ញាប័ណ្ណនៅលើអេក្រង់ភ្លាមៗបន្ទាប់ពីទូទាត់ប្រាក់រួច។</div>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fa-solid fa-check text-cyan-400 mt-0.5"></i>
+                                <div><strong class="text-white">ដំណើរការស្វ័យប្រវត្តិ ២៤/៧៖</strong> លក់ និងផ្ដល់ជូនគ្រប់ពេលវេលាដោយគ្មានការរង់ចាំយូរ។</div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button onclick="openCheckoutModal()" class="w-full bg-cyan-400 hover:bg-cyan-300 text-gray-950 font-bold py-3 rounded-xl transition shadow-lg shadow-cyan-500/20 text-sm flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-qrcode"></i>
+                                <span>ទូទាត់ប្រាក់តាម QR Code</span>
+                            </button>
+                            <button class="w-full bg-[#1b253b] hover:bg-[#23304d] text-white font-semibold py-3 rounded-xl transition text-sm border border-gray-700/50">
+                                បង្កើតគណនីថ្មី
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- CHECKOUT MODAL (QR Code) -->
+    <div id="checkoutModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-[#111827] border border-gray-800 rounded-2xl w-full max-w-md p-6 relative shadow-2xl">
+            <!-- Close Button -->
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="text-xl font-bold text-white mb-1">ទូទាត់ប្រាក់តាម QR Code</h3>
+            <p class="text-xs text-gray-400 mb-4">សូមស្កេន QR ខាងក្រោមដើម្បីបង់ប្រាក់គ្រប់ធនាគារ</p>
+
+            <!-- QR Display Box (ដាក់ QR របស់អ្នកនៅទីនេះ) -->
+            <div class="bg-white p-4 rounded-xl flex flex-col items-center justify-center mb-4">
+                <!-- ជំនួស "acleda-qr.png" ជាមួយឈ្មោះរូបភាព QR របស់អ្នក -->
+                <img src="photo_2026-10-21_02-42-31.jpg" class="w-48 h-48 object-contain">
+                <div class="mt-2 text-gray-900 font-bold text-sm" id="modal-price">តម្លៃ:២៥០០៛</div>
+                
+                <!-- ឈ្មោះម្ចាស់គណនី និងព័ត៌មាន -->
+                <div class="mt-2 text-xs font-semibold text-gray-600">
+                    ឈ្មោះ: <span class="text-blue-600 font-bold">MAB LEK</span>
+                </div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="text-xs text-gray-300 space-y-1.5 mb-6 bg-[#0b101d] p-3 rounded-lg border border-gray-800">
+                <p>១. បើក App ធនាគាររបស់អ្នក រួចស្កេន QR Code នេះ</p>
+                <p>២. ផ្ទៀងផ្ទាត់ទឹកប្រាក់ និងឈ្មោះឱ្យបានត្រឹមត្រូវ</p>
+                <p>៣. ចុចប៊ូតុងខាងក្រោមដើម្បីផ្ញើ Screenshot ចូល Telegram</p>
+                <p>៤.មានបញ្ហាសូមទាក់ទង់ចូល Telegram Username/lekxz168
+
+            </div>
+
+            <!-- Confirm Button (Link ទៅ Telegram) -->
+            <button onclick="confirmPayment()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-bold py-3 rounded-xl transition text-sm flex items-center justify-center space-x-2">
+                <i class="fa-brands fa-telegram text-lg"></i>
+                <span>បង់ប្រាក់រួចសូម(ផ្ញើចូល Telegram)</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        let selectedPriceText = "៦,០០០៛";
+
+        // មុខងារជ្រើសរើសរយៈពេល
+        function selectPackage(element, price) {
+            document.querySelectorAll('.package-card').forEach(card => {
+                card.classList.remove('border-2', 'border-cyan-400', 'bg-[#152238]');
+                card.classList.add('border', 'border-gray-800', 'bg-[#0e1626]');
+            });
+            element.classList.remove('border', 'border-gray-800', 'bg-[#0e1626]');
+            element.classList.add('border-2', 'border-cyan-400', 'bg-[#152238]');
+
+            selectedPriceText = price;
+            document.getElementById('product-price').innerText = price;
+            document.getElementById('modal-price').innerText = "តម្លៃ: " + price;
+        }
+
+        // បើក Modal
+        function openCheckoutModal() {
+            document.getElementById('checkoutModal').classList.remove('hidden');
+        }
+
+        // បិទ Modal
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+        }
+
+        // បញ្ជាក់ការទូទាត់ និងលោតចូល Telegram របស់អ្នក
+        function confirmPayment() {
+            // 🔽 ជំនួស chữ "Lekkzy" ជាមួយ Telegram Username/lekxz168) 🔽
+            const telegramUsername = "lekxz168"; 
+            
+            window.open(`https://t.me/${telegramUsername}`, '_blank');
+            closeCheckoutModal();
+        }
+    </script>
+</body>
+</html>
